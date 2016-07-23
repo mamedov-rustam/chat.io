@@ -1,0 +1,29 @@
+{
+  "name": "chat.io",
+  "description": "simple chat developed with Node JS and Socket.io",
+  "main": "public/app/app.js",
+  "authors": [
+    "rmamedov <mamedov.developer@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "chat",
+    "socket"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "fontawesome#^4.6.3",
+    "bootstrap": "^3.3.6",
+    "jquery": "2.2.4",
+    "angular": "^1.5.8",
+    "angular-ui-router": "^0.3.1",
+    "angular-resource": "^1.5.8"
+  }
+}

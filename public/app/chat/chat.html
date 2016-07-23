@@ -1,0 +1,45 @@
+<button class="btn btn-primary logout-btn" ng-click="vm.logout()"><i class="fa fa-sign-out"></i> Logout</button>
+<div class="row">
+    <div class="col-md-4">
+        <ul class="well list-group">
+            <span class="list-group-item active">Users online</span>
+            <li class="list-group-item" ng-repeat="user in vm.users">{{user.username}}</li>
+        </ul>
+    </div>
+    <div class="col-md-8">
+        <div class="panel panel-primary chat-block">
+            <div class="panel-heading chat-header"><i class="fa fa-comment"></i> Chat</div>
+            <div class="panel-body chat-body">
+                <ul class="media-list">
+                    <li class="media" ng-repeat="message in vm.messages">
+                        <div class="media-body">
+                            <div class="media">
+                                <div class="media-body">
+                                    <span ng-if="message.systemMessage" class="text-info">
+                                        <b>{{message.content}} at {{message.date | date: 'mediumTime'}}</b>
+                                    </span>
+                                    <span ng-if="!message.systemMessage">
+                                        <span>[{{message.date | date: 'mediumTime'}}] </span>
+                                        <b ng-class="{'text-success': vm.username != message.sender,
+                                                      'text-primary': vm.username == message.sender}"> {{message.sender}}: </b>
+                                        <span>{{message.content}}</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="panel-footer chat-footer">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Enter Message"
+                           ng-model="vm.message"
+                           ng-keypress="$event.which === 13 && vm.sendMessage()">
+                    <span class="input-group-btn">
+                    <button class="btn btn-primary" ng-click="vm.sendMessage()">Send</button>
+                </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

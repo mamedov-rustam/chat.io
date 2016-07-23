@@ -1,0 +1,8 @@
+<div class="login-container">
+    <div class="well login-block form-inline">
+        <input type="text" class="form-control" placeholder="Your Nickname"
+               ng-model="vm.username"
+               ng-keypress="$event.which === 13 && vm.enterChat()">
+        <button class="btn btn-primary" ng-click="vm.enterChat()"><i class="fa fa-sign-in"></i> Log In</button>
+    </div>
+</div>

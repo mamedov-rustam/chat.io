@@ -1,0 +1,38 @@
+body {
+    padding-top: 20px;
+}
+
+.chat-block {
+    /*height: 400px*/
+}
+
+.chat-header {
+    /*min-height: 5% !important;*/
+}
+
+.chat-body {
+    height: 350px;
+    overflow-y: auto;
+}
+
+.chat-footer {
+    /*min-height: 10% !important;*/
+}
+
+.logout-btn {
+    margin-bottom: 20px;
+}
+
+.login-container {
+    position: relative;
+}
+
+.login-block {
+    margin-top: 250px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
